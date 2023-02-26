@@ -16,7 +16,7 @@ public class Server {
     public static void main(String[] args) throws Exception{
         String serverName = "Server of Wei Liang";
 
-        //Listening at port 9999
+        //Listening at port 9900
         ServerSocket serverSocket = new ServerSocket(9900);
         System.out.println(serverName+" waiting for connection...");
 

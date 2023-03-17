@@ -7,9 +7,9 @@ package hw3;
  */
 public class HW3 {
     public static void main(String[] args) {
-        int[] sampleRTT = {260, 200, 400};
-        double estRTT = 350;
-        double devRTT = 24;
+        int[] sampleRTT = {220, 220, 240};
+        double estRTT = 280;
+        double devRTT = 27;
         double timeInterval=0;
         int j= (sampleRTT.length);
         int i=0;

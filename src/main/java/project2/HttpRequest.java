@@ -10,7 +10,7 @@ import java.util.StringTokenizer;
  * @date: 3/16/2023 8:22 PM
  */
 final class HttpRequest implements Runnable {
-   final static String CRLF = "/r/n";
+   final static String CRLF = "\r\n\r\n ";
    Socket socket;
 
     public HttpRequest() {
@@ -56,6 +56,7 @@ final class HttpRequest implements Runnable {
         try {
             fis = new FileInputStream(fileName);
         } catch (FileNotFoundException e) {
+            System.out.println("我去2");
             fileExists = false;
         }
 

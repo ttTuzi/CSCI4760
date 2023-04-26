@@ -10,7 +10,7 @@ import java.util.StringTokenizer;
  * @date: 3/16/2023 8:22 PM
  */
 final class HttpRequest implements Runnable {
-   final static String CRLF = "\r\n\r\n ";
+   final static String CRLF = "\n\n ";
    Socket socket;
 
     public HttpRequest() {
@@ -31,11 +31,12 @@ final class HttpRequest implements Runnable {
 
     private void processRequest() throws Exception{
         InputStream is = socket.getInputStream();
+        System.out.println(is+"==========================");
         DataOutputStream os = new DataOutputStream(socket.getOutputStream());
 
-        InputStreamReader isr = new InputStreamReader(is);
-        BufferedReader br = new BufferedReader(isr);
-
+//        InputStreamReader isr = new InputStreamReader(is);
+//        BufferedReader br = new BufferedReader(isr);
+        BufferedReader br = new BufferedReader(new InputStreamReader(is));
         //Http request message
         String requestLine = br.readLine();
 
